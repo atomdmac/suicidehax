@@ -1,0 +1,6 @@
+[submodule "js/lib/jaws"]
+	path = js/lib/jaws
+	url = https://github.com/ippa/jaws.git
+[submodule "js/lib/rot"]
+	path = js/lib/rot
+	url = https://github.com/ondras/rot.js.git
