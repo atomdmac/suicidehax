@@ -1,4 +1,6 @@
-var GAME = (function (GAME) {
+define(["game",
+        "lib/jaws/jaws",],
+function (GAME, jaws) {
 
 /**
  * @class Actor
@@ -41,11 +43,11 @@ Actor.prototype.move = function (direction) {
     
     // Call up to prototype to do actual movement.
     this.prototype.move.call(this, x, y);
-}
+};
 
 Actor.prototype.moveTo = function (cell) {
     // TODO
-}
+};
 
 /**
  * Called when the parent game state is suspended.
@@ -53,7 +55,7 @@ Actor.prototype.moveTo = function (cell) {
  */
 Actor.prototype.suspend = function () {
     // TODO
-}
+};
 
 /**
  * Called when the parent game state is restored from a suspended state.
@@ -61,6 +63,8 @@ Actor.prototype.suspend = function () {
  */
 Actor.prototype.restore = function () {
     // TODO
-}
+};
 
-})(GAME || {});
+return Actor;
+
+});
