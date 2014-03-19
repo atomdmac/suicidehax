@@ -62,4 +62,6 @@ var Attackable = GAME.Attackable = function (host) {
     host.attackable = module;
 };
 
+return Attackable;
+
 });
