@@ -31,21 +31,28 @@ Actor.prototype.act = function () {
 };
 
 /**
- * Attempt to move the Actor in the given direction.
+ * Attempt to move the Actor in the given direction in increments of cells.
  *
  * @memberOf Actor.prototype
  * @param direction {Array} Contains x/y offset to apply to the Actor's current
  *                          position (respectively).
  * @return {Boolean}
  */
-Actor.prototype.move = function (direction) {
+Actor.prototype.moveCellwise = function (direction) {
     // TODO
     
     // Call up to prototype to do actual movement.
     this.prototype.move.call(this, x, y);
 };
 
-Actor.prototype.moveTo = function (cell) {
+/**
+ * Attempt to move the Actor to the given cell.
+ *
+ * @memberOf Actor.prototype
+ * @param {Object} cell - The cell to attempt to move to.
+ * @returns {Boolean} TRUE if successful, FALSE if not.
+ */
+Actor.prototype.moveToCell = function (cell) {
     // TODO
 };
 
