@@ -11,10 +11,12 @@ function (GAME, jaws) {
 var Character = GAME.Character = function (host) {
     var module = {};
     
-    module._stats = {
-        "experience": 0,
-        "level"     : 0,
-        
+    // Experience
+    module.experience = 0;
+    module.level      = 1;
+    
+    // Base attribute scores.
+    module.attributes = {
         "dexterity" : 0,
         "perception": 0,
         "strength"  : 0,
@@ -22,6 +24,16 @@ var Character = GAME.Character = function (host) {
         "wisdom"    : 0,
         "charisma"  : 0
     };
+    
+    module.skills = {
+        "dodge":  0,
+        "blades": 0,
+        "etc":    0
+    };
+    
+    // Calculated scores
+    module.getStealth = function () {};
+    module.getDodge   = function () {};
     
     host.character = module;
 };
